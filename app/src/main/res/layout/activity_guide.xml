@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GuideActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+<!--    four dots-->
+    <LinearLayout
+        android:id="@+id/line_guide_point"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/default_dp_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_guide_point_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_guide_point_select" />
+
+        <ImageView
+            android:id="@+id/iv_guide_point_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_guide_point" />
+
+        <ImageView
+            android:id="@+id/iv_guide_point_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_guide_point" />
+
+        <ImageView
+            android:id="@+id/iv_guide_point_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_guide_point" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:text="@string/skip"
+        android:textSize="@dimen/default_size_14"
+        android:textColor="@color/colorWhite"
+        android:visibility="visible"
+        android:paddingLeft="@dimen/default_dp_15"
+        android:paddingRight="@dimen/default_dp_15"
+        android:gravity="center"
+        android:background="@drawable/guide_skip_shape"
+        android:layout_marginTop="@dimen/default_dp_40"
+        android:layout_marginRight="@dimen/default_dp_20"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_start_app"
+        android:text="@string/start_now"
+        android:textSize="@dimen/default_size_18"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"
+        android:background="@drawable/guide_start_shape"
+        android:paddingRight="@dimen/default_dp_50"
+        android:paddingLeft="@dimen/default_dp_50"
+        android:layout_marginBottom="@dimen/default_dp_80"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
