@@ -16,7 +16,7 @@ import com.example.weatherandroid.adapter.GuidePageAdapter;
 import com.example.weatherandroid.util.Constant;
 import com.example.weatherandroid.util.Logg;
 import com.example.weatherandroid.util.SPKeyValueHelper;
-import com.example.weatherandroid.util.UIUtils;
+import com.example.weatherandroid.util.Utils;
 
 /**
  * Describe:guide app viewPager adapter
@@ -46,7 +46,7 @@ public class GuideActivity extends BaseActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
-        UIUtils.hideBottomUIMenu(this);
+        Utils.hideBottomUIMenu(this);
         //Whether it is the first time to enter the app
         mIsFirst = SPKeyValueHelper.get(Constant.IS_FIRST, true);
         if (mIsFirst) {

@@ -1,9 +1,44 @@
 <resources>
 
-    <string name="app_name">WeatherAndroid</string>
+    <string name="app_name">知心天气</string>
 
-    <!--    MainActivity String-->
-    <string name="skip">跳过></string>
-    <string name="start_now">立即体验</string>
+    <string name="skip" translatable="false">跳过></string>
+    <string name="start_now" translatable="false">立即体验</string>
+    <string name="weather" translatable="false">天气</string>
+    <string name="news" translatable="false">新闻</string>
+    <string name="video" translatable="false">图片</string>
+    <string name="my_account" translatable="false">我的</string>
+    <string name="permission_request" translatable="false">即将申请的权限是程序必须依赖的权限</string>
+    <string name="i_known" translatable="false">我已明白</string>
+    <string name="set_permission" translatable="false">您需要去应用程序设置当中手动开启权限</string>
+    <string name="i_cancel" translatable="false">取消</string>
+    <string name="i_ok" translatable="false">确定</string>
+    <string name="location_off" translatable="false">未授权定位信息，定位失败</string>
+    <string name="exit_app" translatable="false">再按一次返回键，退出程序</string>
+    <string name="gps_switch" translatable="false">位置开关</string>
+    <string name="gps_off" translatable="false">检测到设备没有打开GPS开关</string>
+    <string name="open" translatable="false">打开</string>
+    <string name="china" translatable="false">中国</string>
+    <string name="gps_error" translatable="false">定位失败</string>
+    <string name="get_weather_fail" translatable="false">获取信息失败</string>
+    <string name="yesterday" translatable="false">可根据昨日天气适当增减衣服</string>
+    <string name="all_weather" translatable="false">15天预报</string>
+    <string name="life" translatable="false">生活指数</string>
+    <string name="my_city" translatable="false">我添加的城市</string>
+    <string name="search_city" translatable="false">请输入省、市、县搜索</string>
+    <string name="your_gps" translatable="false">你的位置</string>
+    <string name="login_new_user" translatable="false">新用户</string>
+    <string name="login_user" translatable="false">登录</string>
+    <string name="login_num" translatable="false">输入手机号</string>
+    <string name="login_pass" translatable="false">输入密码(6~16位)</string>
+    <string name="login_again_pass" translatable="false">确认密码(6~16位)</string>
+    <string name="login_forget" translatable="false">忘记密码</string>
+    <string name="login_register" translatable="false">新用户注册</string>
+    <string name="login_user_num" translatable="false">+86</string>
+    <string name="register" translatable="false">注册</string>
+    <string name="modify" translatable="false">修改密码</string>
+    <string name="get_code" translatable="false">获取验证码</string>
+    <string name="register_code" translatable="false">输入验证码</string>
+
 
 </resources>

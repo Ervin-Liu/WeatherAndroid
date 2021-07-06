@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <View
+       android:id="@+id/view_status"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"/>
+
+   <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+       android:layout_below="@+id/view_status"
+       android:id="@+id/top_navigation_constraint"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/colorWhite"
+       android:elevation="4dp"
+       android:padding="12dp"
+       app:bnc_mode="spread">
+
+      <com.gauravk.bubblenavigation.BubbleToggleView
+          android:id="@+id/c_item_rest"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:bt_active="true"
+          app:bt_colorActive="@color/orange_active"
+          app:bt_colorInactive="@color/orange_inactive"
+          app:bt_icon="@drawable/ic_image_dong_man"
+          app:bt_padding="12dp"
+          app:bt_shape="@drawable/transition_background_drawable_default"
+          app:bt_title="动漫"
+          app:bt_titlePadding="8dp" />
+
+      <com.gauravk.bubblenavigation.BubbleToggleView
+          android:id="@+id/c_item_room"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:bt_colorActive="@color/red_active"
+          app:bt_colorInactive="@color/red_inactive"
+          app:bt_icon="@drawable/ic_feng_jing"
+          app:bt_padding="12dp"
+          app:bt_shape="@drawable/transition_background_drawable_default"
+          app:bt_title="风景"
+          app:bt_titlePadding="8dp" />
+
+      <com.gauravk.bubblenavigation.BubbleToggleView
+          android:id="@+id/c_item_happy"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:bt_colorActive="@color/green_active"
+          app:bt_colorInactive="@color/green_inactive"
+          app:bt_icon="@drawable/ic_cong_wu"
+          app:bt_padding="12dp"
+          app:bt_shape="@drawable/transition_background_drawable_default"
+          app:bt_title="萌宠"
+          app:bt_titlePadding="8dp" />
+   </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+   <androidx.viewpager.widget.ViewPager
+       android:id="@+id/view_pager"
+       android:layout_below="@+id/top_navigation_constraint"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
+
+</RelativeLayout>

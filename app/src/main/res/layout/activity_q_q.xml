@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.QQActivity"
+    android:orientation="vertical">
+
+    <!--      status bar-->
+    <View
+        android:id="@+id/view_qq_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_qq_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_qq_back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_black_back"
+            android:layout_marginLeft="@dimen/default_dp_15"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"/>
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:text="QQ号测凶吉"
+            android:textSize="@dimen/default_size_18"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_silver"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_qq"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_qq"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_icon_no"
+            android:layout_marginLeft="@dimen/default_dp_80"
+            android:hint="请输入QQ号"
+            android:gravity="center"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/default_size_20"
+            android:paddingLeft="@dimen/default_dp_50"
+            android:paddingRight="@dimen/default_dp_40"
+            android:paddingTop="@dimen/default_dp_15"
+            android:paddingBottom="@dimen/default_dp_15"/>
+
+        <TextView
+            android:id="@+id/tv_qq_qq"
+            android:text="QQ"
+            android:textSize="@dimen/default_size_18"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_dp_24"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_alignLeft="@+id/et_qq"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_qq_delete"
+            android:layout_width="@dimen/default_dp_18"
+            android:layout_height="@dimen/default_dp_18"
+            android:background="@drawable/ic_cha"
+            android:layout_marginRight="@dimen/default_dp_15"
+            android:layout_alignRight="@+id/et_qq"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:text="点击测试"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/register_no"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_conclusion"
+                    android:text="结论:"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="start"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_analysis"
+                    android:text="分析:"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="start"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/tv_conclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="本功能纯属娱乐,切勿当真！"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>

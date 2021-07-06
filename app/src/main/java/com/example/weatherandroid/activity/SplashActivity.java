@@ -9,8 +9,9 @@ import androidx.annotation.NonNull;
 
 import com.example.weatherandroid.R;
 import com.example.weatherandroid.util.Constant;
+import com.example.weatherandroid.util.Logg;
 import com.example.weatherandroid.util.SPKeyValueHelper;
-import com.example.weatherandroid.util.UIUtils;
+import com.example.weatherandroid.util.Utils;
 
 /**
  * Describe:splash activity
@@ -30,9 +31,10 @@ public class SplashActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        UIUtils.hideBottomUIMenu(this);
+        Utils.hideBottomUIMenu(this);
         //Whether it is the first time to enter the app
         final boolean isFirst = SPKeyValueHelper.get(Constant.IS_FIRST, true);
+        Logg.d(TAG, "onCreate---->isFirst: " + isFirst);
         init();
         if (isFirst) {
             mHandler.sendEmptyMessageDelayed(START_GUIDE_ACTIVITY, 2000);
@@ -44,6 +46,7 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Logg.d(TAG, "onDestroy");
         if (mHandlerThread != null) {
             mHandlerThread.quit();
         }
@@ -74,13 +77,8 @@ public class SplashActivity extends BaseActivity {
      * start GuideActivity
      */
     private void startActivity() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                GuideActivity.startActivity(SplashActivity.this);
-                finish();
-            }
-        }).start();
+        GuideActivity.startActivity(SplashActivity.this);
+        finish();
     }
 
 }

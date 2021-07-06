@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="default_size_10">10sp</dimen>
+    <dimen name="default_size_12">12sp</dimen>
     <dimen name="default_size_14">14sp</dimen>
     <dimen name="default_size_16">16sp</dimen>
     <dimen name="default_size_18">18sp</dimen>
+    <dimen name="default_size_20">20sp</dimen>
+    <dimen name="default_size_30">30sp</dimen>
+    <dimen name="default_size_90">90sp</dimen>
+    <dimen name="default_dp_0.3">0.3dp</dimen>
+    <dimen name="default_dp_1">1dp</dimen>
+    <dimen name="default_dp_2">2dp</dimen>
+    <dimen name="default_dp_5">5dp</dimen>
+    <dimen name="default_dp_8">8dp</dimen>
     <dimen name="default_dp_10">10dp</dimen>
+    <dimen name="default_dp_12">12dp</dimen>
+    <dimen name="default_dp_14">14dp</dimen>
     <dimen name="default_dp_15">15dp</dimen>
+    <dimen name="default_dp_18">18dp</dimen>
     <dimen name="default_dp_20">20dp</dimen>
+    <dimen name="default_dp_24">24dp</dimen>
     <dimen name="default_dp_30">30dp</dimen>
+    <dimen name="default_dp_35">35dp</dimen>
     <dimen name="default_dp_40">40dp</dimen>
+    <dimen name="default_dp_45">45dp</dimen>
     <dimen name="default_dp_50">50dp</dimen>
+    <dimen name="default_dp_55">55dp</dimen>
     <dimen name="default_dp_60">60dp</dimen>
+    <dimen name="default_dp_65">65dp</dimen>
+    <dimen name="default_dp_70">70dp</dimen>
     <dimen name="default_dp_80">80dp</dimen>
+    <dimen name="default_dp_90">90dp</dimen>
+    <dimen name="default_dp_100">100dp</dimen>
+    <dimen name="default_dp_150">150dp</dimen>
+    <dimen name="default_dp_160">160dp</dimen>
+    <dimen name="default_dp_165">165dp</dimen>
+    <dimen name="default_dp_180">180dp</dimen>
+    <dimen name="default_dp_200">200dp</dimen>
+    <dimen name="default_dp_260">260dp</dimen>
+    <dimen name="default_dp_300">300dp</dimen>
+    <dimen name="default_dp_550">550dp</dimen>
 
 
 </resources>

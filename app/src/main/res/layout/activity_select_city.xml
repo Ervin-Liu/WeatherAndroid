@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectCityActivity"
+    android:orientation="vertical"
+    android:background="@color/select_background">
+
+    <!--      status bar-->
+    <View
+        android:id="@+id/view_select_city_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_select_city_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_select_city_back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_white_back"
+            android:layout_marginLeft="@dimen/default_dp_15"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"/>
+
+        <TextView
+            android:id="@+id/tv_select_city"
+            android:text="搜索城市"
+            android:textSize="@dimen/default_size_18"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_centerInParent="true"
+            android:id="@+id/et_search_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_city_background"
+            android:imeOptions="actionSearch"
+            android:layout_marginTop="@dimen/default_dp_10"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="@dimen/default_dp_100"
+            android:hint="@string/search_city"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/default_size_16"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="@dimen/default_dp_50" />
+
+        <ImageView
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"
+            android:src="@drawable/ic_seach"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_alignLeft="@+id/et_search_city"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_show_city"
+        android:layout_margin="@dimen/default_dp_15"
+        android:background="@drawable/select_show_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_select_city"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/default_dp_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

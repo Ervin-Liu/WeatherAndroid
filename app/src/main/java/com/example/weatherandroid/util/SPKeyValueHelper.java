@@ -51,6 +51,17 @@ public final class SPKeyValueHelper {
     }
 
     /**
+     * get key value
+     *
+     * @param key
+     * @param def
+     * @return
+     */
+    public static synchronized String get(String key, String def) {
+        return getSharedPreferences().getString(key, def);
+    }
+
+    /**
      * put key value
      *
      * @param key
@@ -82,6 +93,17 @@ public final class SPKeyValueHelper {
     public static synchronized boolean put(String key, boolean value) {
         return getSharedPreferences().edit().putBoolean(key, value).commit();
     }
+    /**
+     * put key value
+     *
+     * @param key
+     * @param value
+     * @return
+     */
+    public static synchronized boolean put(String key, String value) {
+        return getSharedPreferences().edit().putString(key, value).commit();
+    }
+
 
     /**
      * Get SharedPreferences

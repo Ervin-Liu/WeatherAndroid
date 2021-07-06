@@ -1,8 +1,16 @@
 package com.example.weatherandroid.util;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Build;
+import android.text.InputFilter;
+import android.text.Spanned;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
@@ -10,13 +18,29 @@ import android.view.WindowManager;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Describe: UI adapter util
  * <p>
  * Created by Ervin Liu on 2021/04/05---22:51
  **/
-public class UIUtils {
+public class Utils {
+
+    /**
+     * Status Bar Transparent
+     * @param activity
+     */
+    public static void setTranslucent(Activity activity) {
+        //Version higher than 5.0, notification bar transparent
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = activity.getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+    }
 
     public static float getScreenWidthDp(Context context) {
         final float scale = context.getResources().getDisplayMetrics().density;
@@ -29,7 +53,7 @@ public class UIUtils {
         hideBottomUIMenu(activity);
         float height;
         int realHeight = getRealHeight(activity);
-        if (UIUtils.hasNotchScreen(activity)) {
+        if (Utils.hasNotchScreen(activity)) {
             height = px2dip(activity, realHeight - getStatusBarHeight(activity));
         } else {
             height = px2dip(activity, realHeight);
@@ -234,5 +258,105 @@ public class UIUtils {
             // ignore
         }
         return sIsMiui;
+    }
+
+    /**
+     * 设置状态栏的字体为黑色
+     * @param activity
+     * @param dark
+     */
+    public static void setAndroidNativeLightStatusBar(Activity activity, boolean dark) {
+        View decor = activity.getWindow().getDecorView();
+        if (dark) {
+            decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        } else {
+            decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        }
+    }
+
+    /**
+     * 判断gps是否开启
+     * @param context
+     * @return
+     */
+    public static final boolean isGpsOpen(final Context context) {
+        LocationManager locationManager
+                = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        // 通过GPS卫星定位，定位级别可以精确到街（通过24颗卫星定位，在室外和空旷的地方定位准确、速度快）
+        boolean gps = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        // 通过WLAN或移动网络(3G/2G)确定的位置（也称作AGPS，辅助GPS定位。主要用于在室内或遮盖物（建筑群或茂密的深林等）密集的地方定位）
+        boolean network = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        if (gps|| network) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Gets the width of the phone
+     * @param activity
+     * @return
+     */
+    public static int getWidthPixels(Activity activity) {
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(outMetrics);
+        int widthPixels = outMetrics.widthPixels;
+        int heightPixels = outMetrics.heightPixels;
+        return widthPixels;
+    }
+
+    /**
+     * Gets the Height of the phone
+     * @param activity
+     * @return
+     */
+    public static int getHeightPixels(Activity activity) {
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(outMetrics);
+        int widthPixels = outMetrics.widthPixels;
+        int heightPixels = outMetrics.heightPixels;
+        return heightPixels;
+    }
+
+    /*
+      * EditText限制只能输入汉字
+     */
+    public static InputFilter getInputFilter() {
+        InputFilter filter = new InputFilter() {
+            public CharSequence filter(CharSequence source, int start, int end,
+                                       Spanned dest, int dstart, int dend) {
+                if (TextUtils.isEmpty(source)){
+                    return "";
+                }
+
+                for (int i = start; i < end; i++) {
+                    if (stringFilterChinese(source) && !source.toString().contains("。") && !source.toString ().contains("，")) {
+                        return "";
+                    }
+                }
+                return null;
+            }
+        };
+        return filter;
+    }
+
+
+    /**
+     * 限制只能输入汉字，过滤非汉字
+     *
+     * @param str 输入值
+     * @return true 非汉字；false 汉字
+     */
+    public static boolean stringFilterChinese(CharSequence str) {
+        //只允许汉字，正则表达式匹配出所有非汉字
+        String regEx = "[^\u4E00-\u9FA5]";
+        Pattern p = Pattern.compile(regEx);
+        Matcher m = p.matcher(str);
+        if (m.find()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ModifyPassActivity"
+    android:orientation="vertical">
+
+    <!--      status bar-->
+    <View
+        android:id="@+id/view_modify_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_modify_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_modify_back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_black_back"
+            android:layout_marginLeft="@dimen/default_dp_15"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"/>
+
+        <TextView
+            android:id="@+id/tv_modify_title"
+            android:text="@string/modify"
+            android:textSize="@dimen/default_size_18"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/default_dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rela_modify_unm"
+            android:layout_above="@+id/rela_pass"
+            android:layout_marginBottom="@dimen/default_dp_20"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_modify_num"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_icon_no"
+                android:layout_marginLeft="@dimen/default_dp_50"
+                android:hint="@string/login_num"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/default_size_20"
+                android:paddingLeft="@dimen/default_dp_50"
+                android:paddingRight="@dimen/default_dp_40"
+                android:paddingTop="@dimen/default_dp_15"
+                android:paddingBottom="@dimen/default_dp_15"/>
+
+            <TextView
+                android:id="@+id/tv_modify_num_num"
+                android:text="@string/login_user_num"
+                android:textSize="@dimen/default_size_18"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/default_dp_24"
+                android:layout_marginLeft="@dimen/default_dp_20"
+                android:layout_alignLeft="@+id/et_modify_num"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/iv_modify_num_delete"
+                android:layout_width="@dimen/default_dp_18"
+                android:layout_height="@dimen/default_dp_18"
+                android:background="@drawable/ic_cha"
+                android:layout_marginRight="@dimen/default_dp_15"
+                android:layout_alignRight="@+id/et_modify_num"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_modify_get_code"
+            android:background="@drawable/register_get_code"
+            android:text="@string/get_code"
+            android:gravity="center"
+            android:textSize="@dimen/default_size_18"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="@dimen/default_dp_20"
+            android:paddingTop="@dimen/default_dp_15"
+            android:paddingBottom="@dimen/default_dp_15"
+            android:layout_weight="1.8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rela_modify_pass"
+        android:layout_above="@+id/rela_start_login"
+        android:layout_marginTop="@dimen/default_dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_modify_pass"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_icon_no"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:hint="@string/login_pass"
+            android:gravity="center"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/default_size_20"
+            android:paddingLeft="@dimen/default_dp_50"
+            android:paddingRight="@dimen/default_dp_40"
+            android:paddingTop="@dimen/default_dp_15"
+            android:paddingBottom="@dimen/default_dp_15"/>
+
+        <ImageView
+            android:id="@+id/iv_modify_pass_see"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"
+            android:background="@drawable/ic_pass_nu_look"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_alignLeft="@+id/et_modify_pass"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_modify_pass_delete"
+            android:layout_width="@dimen/default_dp_18"
+            android:layout_height="@dimen/default_dp_18"
+            android:background="@drawable/ic_cha"
+            android:layout_marginRight="@dimen/default_dp_15"
+            android:layout_alignRight="@+id/et_modify_pass"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_modify_again_pass"
+        android:layout_above="@+id/rela_start_login"
+        android:layout_marginTop="@dimen/default_dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_modify_again_pass"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_icon_no"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:hint="@string/login_again_pass"
+            android:gravity="center"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/default_size_20"
+            android:paddingLeft="@dimen/default_dp_50"
+            android:paddingRight="@dimen/default_dp_40"
+            android:paddingTop="@dimen/default_dp_15"
+            android:paddingBottom="@dimen/default_dp_15"/>
+
+        <ImageView
+            android:id="@+id/iv_modify_again_pass_see"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"
+            android:background="@drawable/ic_pass_nu_look"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_alignLeft="@+id/et_modify_again_pass"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_modify_again_pass_delete"
+            android:layout_width="@dimen/default_dp_18"
+            android:layout_height="@dimen/default_dp_18"
+            android:background="@drawable/ic_cha"
+            android:layout_marginRight="@dimen/default_dp_15"
+            android:layout_alignRight="@+id/et_modify_again_pass"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_code"
+        android:layout_above="@+id/rela_start_login"
+        android:layout_marginTop="@dimen/default_dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_modify_code"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_icon_no"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:hint="@string/register_code"
+            android:gravity="center"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/default_size_20"
+            android:paddingLeft="@dimen/default_dp_50"
+            android:paddingRight="@dimen/default_dp_40"
+            android:paddingTop="@dimen/default_dp_15"
+            android:paddingBottom="@dimen/default_dp_15"/>
+
+        <ImageView
+            android:id="@+id/iv_modify_code"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"
+            android:background="@drawable/ic_code_icon"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_alignLeft="@+id/et_modify_code"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_modify_code_delete"
+            android:layout_width="@dimen/default_dp_18"
+            android:layout_height="@dimen/default_dp_18"
+            android:background="@drawable/ic_cha"
+            android:layout_marginRight="@dimen/default_dp_15"
+            android:layout_alignRight="@+id/et_modify_code"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_modify"
+        android:text="修改"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/register_no"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

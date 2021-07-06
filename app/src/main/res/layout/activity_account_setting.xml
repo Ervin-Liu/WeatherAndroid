@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AccountSettingActivity"
+    android:orientation="vertical">
+
+    <!--      status bar-->
+    <View
+        android:id="@+id/view_account_setting_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_account_setting_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_account_setting_back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_black_back"
+            android:layout_marginLeft="@dimen/default_dp_15"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"/>
+
+        <TextView
+            android:id="@+id/tv_account_setting"
+            android:text="设置"
+            android:textSize="@dimen/default_size_18"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_silver"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_setting"
+        android:layout_marginTop="@dimen/default_dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_clear_cache"
+                android:text="清除缓存"
+                android:textSize="@dimen/default_size_18"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/default_dp_15"
+                android:layout_marginBottom="@dimen/default_dp_15"
+                android:layout_marginLeft="@dimen/default_dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:background="@color/color_silver"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+
+            <TextView
+                android:id="@+id/tv_version_update"
+                android:text="版本更新"
+                android:textSize="@dimen/default_size_18"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/default_dp_15"
+                android:layout_marginBottom="@dimen/default_dp_15"
+                android:layout_marginLeft="@dimen/default_dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:background="@color/color_silver"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+
+            <TextView
+                android:id="@+id/tv_suggestion"
+                android:text="反馈与建议"
+                android:textSize="@dimen/default_size_18"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/default_dp_15"
+                android:layout_marginBottom="@dimen/default_dp_15"
+                android:layout_marginLeft="@dimen/default_dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:background="@color/color_silver"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+
+            <TextView
+                android:id="@+id/tv_about_our"
+                android:text="关于我们"
+                android:textSize="@dimen/default_size_18"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/default_dp_15"
+                android:layout_marginBottom="@dimen/default_dp_15"
+                android:layout_marginLeft="@dimen/default_dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:background="@color/color_silver"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_login_register"
+            android:background="@drawable/setting_register_login"
+            android:layout_alignParentBottom="true"
+            android:text="退出登录"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/default_dp_15"
+            android:layout_marginRight="@dimen/default_dp_15"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

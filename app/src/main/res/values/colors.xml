@@ -6,14 +6,71 @@
 
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite_bf">#bfffffff</color>
+    <color name="colorWhite_80">#80ffffff</color>
     <color name="colorStartApp">#0080FF</color>
+    <color name="color_list_city">#039be6</color>
     <color name="colorHalfTransparent">#80FFFFFF</color>
     <color name="colorSkip">#80000000</color>
     <color name="colorTransparent">#00000000</color>
-
 
     <color name="indicator_1">#55B3C2</color>
     <color name="indicator_2">#64A4A4</color>
     <color name="indicator_3">#66D7B9</color>
     <color name="indicator_4">#FDBC7D</color>
+
+    <color name="red_active">#f44336</color>
+    <color name="blue_active">#03a9f4</color>
+    <color name="green_active">#4caf50</color>
+    <color name="purple_active">#9c27b0</color>
+
+    <color name="red_inactive">#e57373</color>
+    <color name="blue_inactive">#64b5f6</color>
+    <color name="green_inactive">#81c784</color>
+    <color name="purple_inactive">#ba68c8</color>
+
+    <color name="red_bg_light">#ffebee</color>
+    <color name="purple_bg_light">#f3e5f5</color>
+    <color name="blue_bg_light">#e3f2fd</color>
+    <color name="green_bg_light">#e8f5e9</color>
+
+    <color name="pe">#008577</color>
+    <color name="per">#83e8dd</color>
+
+    <!--    dialog-->
+    <color name="dialog_title">#333333</color>
+    <color name="dialog_content">#3F3F3F</color>
+    <color name="dialog_button">#4FAD53</color>
+
+    <color name="list_city">#039BE3</color>
+    <color name="list_cancel">#3D3D3D</color>
+
+    <color name="air">#AFB4B7</color>
+    <color name="air_background">#50000000</color>
+
+
+    <color name="good_weather">#8f21a6e7</color>
+    <color name="background_weather">#bf21a6e7</color>
+    <color name="bad_weather">#4c555c</color>
+
+    <color name="gray">#A9A9A9</color>
+
+    <color name="select_background">#5BB55E</color>
+
+    <color name="parent_city_background">#77DF7E</color>
+    <color name="select_gps">#9BE0A0</color>
+    <color name="color_silver">#C8C8C8</color>
+    <color name="color_silver2">#B5B5B5</color>
+
+    <color name="color_login_no">#F3F2F7</color>
+    <color name="color_login_yes">#089DF3</color>
+
+    <color name="orange_active">#ff9800</color>
+    <color name="orange_inactive">#ffb74d</color>
+    <color name="grey_bg_light">#fafafa</color>
+    <color name="red">#F50414</color>
+
+    <color name="yellow">#FFEE58</color>
+
+
 </resources>

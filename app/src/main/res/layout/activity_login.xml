@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rela_unm"
+        android:layout_above="@+id/rela_pass"
+        android:layout_marginBottom="@dimen/default_dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_num"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_icon_no"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:hint="@string/login_num"
+            android:gravity="center"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/default_size_20"
+            android:paddingLeft="@dimen/default_dp_50"
+            android:paddingRight="@dimen/default_dp_40"
+            android:paddingTop="@dimen/default_dp_15"
+            android:paddingBottom="@dimen/default_dp_15"/>
+
+        <TextView
+            android:id="@+id/tv_num_num"
+            android:text="@string/login_user_num"
+            android:textSize="@dimen/default_size_18"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_dp_24"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_alignLeft="@+id/et_num"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_num_delete"
+            android:layout_width="@dimen/default_dp_18"
+            android:layout_height="@dimen/default_dp_18"
+            android:background="@drawable/ic_cha"
+            android:layout_marginRight="@dimen/default_dp_15"
+            android:layout_alignRight="@+id/et_num"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_pass"
+        android:layout_above="@+id/rela_start_login"
+        android:layout_marginBottom="@dimen/default_dp_70"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_icon_no"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:hint="@string/login_pass"
+            android:gravity="center"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/default_size_20"
+            android:paddingLeft="@dimen/default_dp_50"
+            android:paddingRight="@dimen/default_dp_40"
+            android:paddingTop="@dimen/default_dp_15"
+            android:paddingBottom="@dimen/default_dp_15"/>
+
+        <ImageView
+            android:id="@+id/iv_pass_see"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"
+            android:background="@drawable/ic_pass_nu_look"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_alignLeft="@+id/et_pass"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_pass_delete"
+            android:layout_width="@dimen/default_dp_18"
+            android:layout_height="@dimen/default_dp_18"
+            android:background="@drawable/ic_cha"
+            android:layout_marginRight="@dimen/default_dp_15"
+            android:layout_alignRight="@+id/et_pass"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_start_login"
+        android:background="@drawable/login_icon_no"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/default_dp_70"
+        android:layout_height="@dimen/default_dp_70">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic__start_login"
+            android:layout_width="@dimen/default_dp_40"
+            android:layout_height="@dimen/default_dp_40"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/default_dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_dp_50">
+
+        <TextView
+            android:id="@+id/tv_login_forget"
+            android:text="@string/login_forget"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_size_12"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@id/view_gang"
+            android:layout_marginRight="@dimen/default_dp_10"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_dp_20"/>
+
+        <View
+            android:id="@+id/view_gang"
+            android:layout_centerInParent="true"
+            android:background="@color/color_silver"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/default_dp_1"
+            android:layout_margin="@dimen/default_dp_20"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_login_register"
+            android:text="@string/login_register"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_size_12"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/default_dp_10"
+            android:layout_toRightOf="@id/view_gang"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_dp_20"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

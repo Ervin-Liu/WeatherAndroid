@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <!--      status bar-->
+    <View
+        android:id="@+id/view_account_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_account_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:text="知心天气"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_size_20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/default_dp_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_account_setting"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_account_setting"
+            android:layout_marginRight="@dimen/default_size_20"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"/>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_silver"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_dp_260">
+
+        <ImageView
+            android:id="@+id/iv_user_background"
+            android:background="@drawable/background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_dp_200"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@color/colorWhite"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:layout_marginTop="@dimen/default_dp_160"
+            android:layout_width="@dimen/default_dp_90"
+            android:layout_height="@dimen/default_dp_90"/>
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/civ_tou_xiang"
+           android:src="@drawable/ic_default_tou_xiang"
+           android:scaleType="centerCrop"
+           android:layout_marginLeft="@dimen/default_dp_55"
+           android:layout_marginTop="@dimen/default_dp_165"
+           android:layout_width="@dimen/default_dp_80"
+           android:layout_height="@dimen/default_dp_80"/>
+
+        <ImageView
+            android:id="@+id/iv_user_setting"
+            android:background="@drawable/ic_user_setting"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/default_dp_10"
+            android:layout_marginRight="@dimen/default_dp_20"
+            android:layout_width="@dimen/default_dp_24"
+            android:layout_height="@dimen/default_dp_24"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:text="登陆/注册"
+            android:textSize="@dimen/default_size_30"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:layout_marginTop="@dimen/default_dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_user_signature"
+            android:text="暂无介绍"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/default_size_14"
+            android:textColor="@color/color_silver2"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/default_dp_50"
+            android:layout_marginTop="@dimen/default_dp_10"
+            android:layout_marginBottom="@dimen/default_dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/color_silver"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_dp_0.3"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linear_day_now"
+        android:layout_marginTop="40dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@drawable/ic_day_now"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+        <TextView
+            android:text="历史的今天"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/color_silver"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_dp_0.3"/>
+
+    <LinearLayout
+        android:id="@+id/linear_qq"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@drawable/ic_xing_zuo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+        <TextView
+            android:text="QQ号测试"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/color_silver"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_dp_0.3"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:text="更多功能正在开发中..."
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

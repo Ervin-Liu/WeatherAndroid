@@ -3,6 +3,8 @@ package com.example.weatherandroid.application;
 import android.app.Application;
 import android.content.Context;
 
+import org.litepal.LitePal;
+
 /**
  * Describe: WeatherAndroid application
  * <p>
@@ -17,6 +19,8 @@ public class WeatherApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        LitePal.initialize(this);
+//        Connector.getDatabase();
         sApplication = this;
     }
 
@@ -28,4 +32,5 @@ public class WeatherApplication extends Application {
     public static Context getApplication() {
         return sApplication;
     }
+
 }

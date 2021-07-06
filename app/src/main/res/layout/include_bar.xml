@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linear_status_action_bar"
+    android:orientation="vertical">
+
+   <!--      status bar-->
+   <View
+       android:id="@+id/view_status_bar"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"/>
+
+   <RelativeLayout
+       android:id="@+id/rela_setting_city"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize">
+
+      <TextView
+          android:id="@+id/tv_city"
+          android:textSize="@dimen/default_size_18"
+          android:textColor="@color/colorWhite"
+          android:gravity="center"
+          android:layout_centerInParent="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+<!--      <ImageView-->
+<!--          android:id="@+id/iv_setting"-->
+<!--          android:layout_centerInParent="true"-->
+<!--          android:layout_alignParentRight="true"-->
+<!--          android:layout_marginRight="@dimen/default_dp_20"-->
+<!--          android:background="@drawable/ic_weather_setting"-->
+<!--          android:layout_width="@dimen/default_dp_24"-->
+<!--          android:layout_height="@dimen/default_dp_24"/>-->
+
+      <ImageView
+          android:id="@+id/iv_list_city"
+          android:layout_alignParentRight="true"
+          android:layout_centerInParent="true"
+          android:background="@drawable/ic_select_city"
+          android:layout_marginRight="@dimen/default_dp_20"
+          android:layout_width="30dp"
+          android:layout_height="30dp"/>
+
+      <LinearLayout
+          android:id="@+id/linear_city_point"
+          android:layout_below="@+id/tv_city"
+          android:gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+      </LinearLayout>
+
+
+
+   </RelativeLayout>
+
+</LinearLayout>

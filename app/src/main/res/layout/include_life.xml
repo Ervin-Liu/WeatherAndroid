@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rela_life"
+    android:layout_margin="@dimen/default_dp_10"
+    android:background="@drawable/weather_seven_type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_life_vertical"
+        android:background="@drawable/ic_v"
+        android:layout_marginTop="@dimen/default_dp_5"
+        android:layout_width="@dimen/default_dp_24"
+        android:layout_height="@dimen/default_size_14"/>
+
+    <TextView
+        android:id="@+id/tv_life_tip"
+        android:text="@string/life"
+        android:textSize="@dimen/default_size_14"
+        android:textColor="@color/colorWhite"
+        android:layout_toRightOf="@+id/iv_life_vertical"
+        android:layout_margin="@dimen/default_dp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/linear_life"
+        android:layout_below="@+id/iv_life_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rela_life_uv"
+            android:layout_marginTop="@dimen/default_dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_life_uv"
+                android:background="@drawable/ic_life_uv"
+                android:layout_marginRight="@dimen/default_dp_15"
+                android:layout_width="@dimen/default_dp_45"
+                android:layout_height="@dimen/default_dp_45"/>
+
+            <LinearLayout
+                android:id="@+id/linear_uv_title_tip"
+                android:layout_toRightOf="@id/iv_life_uv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_uv_title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_uv_result"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_14"
+                    android:background="@drawable/life_result_background"
+                    android:layout_marginLeft="@dimen/default_dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_uv_content"
+                android:textColor="@color/colorWhite_bf"
+                android:textSize="@dimen/default_size_14"
+                android:layout_below="@+id/linear_uv_title_tip"
+                android:layout_toRightOf="@+id/iv_life_uv"
+                android:layout_marginTop="@dimen/default_dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/rela_life_sport"-->
+<!--            android:layout_marginTop="@dimen/default_dp_20"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_life_sport"-->
+<!--                android:src="@drawable/ic_life_sport"-->
+<!--                android:scaleType="center"-->
+<!--                android:layout_marginRight="@dimen/default_dp_15"-->
+<!--                android:layout_width="@dimen/default_dp_45"-->
+<!--                android:layout_height="@dimen/default_dp_45"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linear_sport_title_tip"-->
+<!--                android:layout_toRightOf="@id/iv_life_sport"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_sport_title"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:textSize="@dimen/default_size_16"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_sport_result"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:textSize="@dimen/default_size_14"-->
+<!--                    android:layout_marginLeft="@dimen/default_dp_15"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_sport_content"-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:textSize="@dimen/default_size_14"-->
+<!--                android:layout_below="@+id/linear_sport_title_tip"-->
+<!--                android:layout_toRightOf="@+id/iv_life_sport"-->
+<!--                android:layout_marginTop="@dimen/default_dp_8"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/rela_life_clothes"
+            android:layout_marginTop="@dimen/default_dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_life_clothes"
+                android:src="@drawable/ic_life_clothes"
+                android:scaleType="center"
+                android:layout_marginRight="@dimen/default_dp_15"
+                android:layout_width="@dimen/default_dp_45"
+                android:layout_height="@dimen/default_dp_45"/>
+
+            <LinearLayout
+                android:id="@+id/linear_clothes_title_tip"
+                android:layout_toRightOf="@id/iv_life_clothes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_clothes_title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_clothes_result"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_14"
+                    android:background="@drawable/life_result_background"
+                    android:layout_marginLeft="@dimen/default_dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_clothes_content"
+                android:textColor="@color/colorWhite_bf"
+                android:textSize="@dimen/default_size_14"
+                android:layout_below="@+id/linear_clothes_title_tip"
+                android:layout_toRightOf="@+id/iv_life_clothes"
+                android:layout_marginTop="@dimen/default_dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_life_car"
+            android:layout_marginTop="@dimen/default_dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_life_car"
+                android:src="@drawable/ic_life_car"
+                android:scaleType="center"
+                android:layout_marginRight="@dimen/default_dp_15"
+                android:layout_width="@dimen/default_dp_45"
+                android:layout_height="@dimen/default_dp_45"/>
+
+            <LinearLayout
+                android:id="@+id/linear_car_title_tip"
+                android:layout_toRightOf="@id/iv_life_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_car_title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_car_result"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_14"
+
+                    android:background="@drawable/life_result_background"
+                    android:layout_marginLeft="@dimen/default_dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_car_content"
+                android:textColor="@color/colorWhite_bf"
+                android:textSize="@dimen/default_size_14"
+                android:layout_below="@+id/linear_car_title_tip"
+                android:layout_toRightOf="@+id/iv_life_car"
+                android:layout_marginTop="@dimen/default_dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_life_sugar"
+            android:layout_marginTop="@dimen/default_dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_life_sugar"
+                android:src="@drawable/ic_life_sugar"
+                android:scaleType="center"
+                android:layout_marginRight="@dimen/default_dp_15"
+                android:layout_width="@dimen/default_dp_45"
+                android:layout_height="@dimen/default_dp_45"/>
+
+            <LinearLayout
+                android:id="@+id/linear_sugar_title_tip"
+                android:layout_toRightOf="@id/iv_life_sugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sugar_title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_sugar_result"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_14"
+                    android:layout_marginLeft="@dimen/default_dp_15"
+                    android:background="@drawable/life_result_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sugar_content"
+                android:textColor="@color/colorWhite_bf"
+                android:textSize="@dimen/default_size_14"
+                android:layout_below="@+id/linear_sugar_title_tip"
+                android:layout_toRightOf="@+id/iv_life_sugar"
+                android:layout_marginTop="@dimen/default_dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_life_tip"
+            android:layout_marginTop="@dimen/default_dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_life_tip"
+                android:src="@drawable/ic_life_tip"
+                android:scaleType="center"
+                android:layout_marginRight="@dimen/default_dp_15"
+                android:layout_width="@dimen/default_dp_45"
+                android:layout_height="@dimen/default_dp_45"/>
+
+            <LinearLayout
+                android:id="@+id/linear_tip_title_tip"
+                android:layout_toRightOf="@id/iv_life_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_tip_title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_tip_result"
+                    android:gravity="center"
+                    android:background="@drawable/life_result_background"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_size_14"
+                    android:layout_marginLeft="@dimen/default_dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tip_content"
+                android:textColor="@color/colorWhite_bf"
+                android:textSize="@dimen/default_size_14"
+                android:layout_below="@+id/linear_tip_title_tip"
+                android:layout_toRightOf="@+id/iv_life_tip"
+                android:layout_marginTop="@dimen/default_dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
